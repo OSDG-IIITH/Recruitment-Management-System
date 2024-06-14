@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    env_file:
+      - ./envs/.env
